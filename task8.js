@@ -1,7 +1,7 @@
 const today=new Date()
 var aug14=new Date(today.getFullYear(),7,14)
 
-if(today.getMonth()==7 && today.getDate()>14)
+if(today.getMonth()>=7 && today.getDate()>14)
 {
     aug14.setFullYear(aug14.getFullYear()+1)
 }
