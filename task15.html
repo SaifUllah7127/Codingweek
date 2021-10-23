@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>15. Write a JavaScript program to convert a given days to hours 
+        and minutes. i.e: 1 day equals 24hr</h3>
+    <label for="1">Enter Days</label><br>
+    <input type="Number" id="1"><br><br>
+    <button onclick="convert()">Convert</button>
+    <p id="2"></p>
+    
+    <script>
+        
+        function convert(){
+            let a=Number(document.getElementById("1").value)
+            let hrs=a*24
+            let min=hrs*60
+            document.getElementById("2").innerText=a+" Days is equal to "+hrs
+            +" hours and "+min+" minutes"
+
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>19. Write a JavaScript program to find the number 
+        which appears most in a given array of Numbers.</h3>
+    <label for="1">Enter 1st Num</label><br>
+    <input type="Number" id="1"><br>
+    <label for="2">Enter 2nd Num</label><br>
+    <input type="Number" id="2"><br>
+    <label for="3">Enter 3rd Num</label><br>
+    <input type="Number" id="3"><br>
+    <label for="4">Enter 4th Num</label><br>
+    <input type="Number" id="4"><br>
+    <label for="5">Enter 5th Num</label><br>
+    <input type="Number" id="5"><br>
+    <label for="6">Enter 6th Num</label><br>
+    <input type="Number" id="6"><br>
+    <label for="7">Enter 7th Num</label><br>
+    <input type="Number" id="7"><br>
+    <label for="8">Enter 8th Num</label><br>
+    <input type="Number" id="8"><br><br>
+    <button onclick="get_array()">Submit Array</button>
+    <button onclick="appear_most()">Check</button>
+    <p id="a"></p>
+    
+    
+    
+     
+    <script>
+         function get_array()
+        { let aes1=[]
+          let a=1
+            for(var i=0;i<8;i++)
+            {  aes1[i]=document.getElementById(a).value
+               a++
+            }
+          return aes1 
+        }
+        function appear_most(aes1=get_array()) {
+           var ae = []
+           res = 0;
+
+           for(var i = 0; i < 10; i++) {
+              ae.push(0);
+           }
+          for(var i = 0; i < aes1.length; i++) {
+           ae[aes1[i] - 1]++;
+           if(ae[aes1[i] - 1] > ae[res]) {
+           res = aes1[i] - 1;
+                }
+          }
+         document.getElementById("a").innerText= res + 1;  
+        }  
+    </script>
+</body>
+</html>

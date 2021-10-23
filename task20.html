@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>20. Write a JavaScript program to replace all the numbers with a 
+        specified number of a given array of Numbers.</h3>
+    <label for="1">Enter 1st Num</label><br>
+    <input type="Number" id="1"><br>
+    <label for="2">Enter 2nd Num</label><br>
+    <input type="Number" id="2"><br>
+    <label for="3">Enter 3rd Num</label><br>
+    <input type="Number" id="3"><br>
+    <label for="4">Enter 4th Num</label><br>
+    <input type="Number" id="4"><br>
+    <label for="5">Enter 5th Num</label><br>
+    <input type="Number" id="5"><br>
+    <label for="6">Enter 6th Num</label><br>
+    <input type="Number" id="6"><br>
+    <label for="7">Enter 7th Num</label><br>
+    <input type="Number" id="7"><br>
+    <label for="8">Enter 8th Num</label><br>
+    <input type="Number" id="8"><br><br>
+    <button onclick="get_array()">Submit Array</button><br><br>
+    <label for="9">Enter Num you want to replace</label><br>
+    <input type="Number" id="9"><br><br>
+    <label for="10">Enter Num you want to replace with</label><br>
+    <input type="Number" id="10"><br><br>
+    <button onclick="replace_num()">Replace</button>
+    <p id="a"></p>
+    <p id="c"></p>
+
+
+
+
+
+
+    <script>
+         function get_array()
+        { let aes1=[]
+          let a=1
+            for(var i=0;i<8;i++)
+            {  aes1[i]=document.getElementById(a).value
+               a++
+            }
+          return aes1 
+        }
+
+        function replace_num(aes1=get_array())
+        { let a1=Number(document.getElementById("9").value)
+          let a2=Number(document.getElementById("10").value)
+          let b=aes1.length
+          document.getElementById("a").innerText=aes1
+
+          for(var i=0;i<b;i++)
+          {
+              if(aes1[i]==a1)
+              {
+                  aes1[i]=a2
+              }
+          }
+          
+          document.getElementById("c").innerText=aes1
+          console.log(aes1)
+        }
+
+    </script>
+</body>
+</html>

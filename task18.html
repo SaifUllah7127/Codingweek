@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>18. Write a JavaScript program to find the kth 
+        greatest element of a given array of Numbers</h3>
+    <label for="1">Enter 1st Num</label><br>
+    <input type="Number" id="1"><br>
+    <label for="2">Enter 2nd Num</label><br>
+    <input type="Number" id="2"><br>
+    <label for="3">Enter 3rd Num</label><br>
+    <input type="Number" id="3"><br>
+    <label for="4">Enter 4th Num</label><br>
+    <input type="Number" id="4"><br><br>
+    <button onclick="submit_array()">Submit Array</button><br><br>
+    <label for="4">Enter Kth Choice</label><br>
+    <input type="Number" id="5"><br><br>
+    <button onclick="kth_greatest()">Check kth greatest</button>
+    <p id="a"></p>
+    
+
+    <script>
+     
+     function submit_array()
+        { let aes1=[]
+          let a=1
+            for(var i=0;i<4;i++)
+            {  aes1[i]=document.getElementById(a).value
+               a++
+            }
+          return aes1 
+        }
+     function kth_greatest(aes1=submit_array())
+     {   let k=Number(document.getElementById("5").value)
+         let b=aes1.length
+         let max_ind
+         let temp
+         for(var i=0;i<b;i++)
+         { max_ind=i
+           temp=aes1[i]
+
+           for(var j=i+1;j<=b;j++)
+           {
+              if(aes1[j]>aes1[max_ind])
+              {
+                  max_ind=j
+              }
+           }
+           aes1[i]=aes1[max_ind]
+           aes1[max_ind]=temp
+         }
+         document.getElementById("a").innerText=aes1[k-1]
+         console.log(aes1)
+         
+     }
+
+    </script>
+</body>
+</html>
